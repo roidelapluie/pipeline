@@ -7,6 +7,8 @@ def job_name=full_name[1]
 
 node {
 git(url: "git://github.com/roidelapluie/${directory_name}")
+sh('make')
+sh('make test')
 }
 
 
