@@ -4,7 +4,6 @@ echo(message: env.JOB_NAME)
 def full_name=env.JOB_NAME.split('/')
 def directory_name=full_name[0]
 def job_name=full_name[1]
-load "default.groovy"
 
 node {
     git(url: "git://github.com/roidelapluie/${directory_name}")
